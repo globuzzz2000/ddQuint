@@ -142,8 +142,8 @@ class Config:
     
     # Color scheme for targets (up to 10 chromosomes)
     DEFAULT_COLOR_PALETTE = [
-        "#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd",
-        "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf",
+        "#1f77b4", "#f59a23", "#7ec638", "#16d9ff", "#f65352",
+        "#82218b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf",
     ]
     SPECIAL_COLOR_DEFAULTS = {
         "Negative": "#1f77b4",
@@ -615,7 +615,7 @@ class Config:
         to apply any user-customized parameters.
         """
         try:
-            from .utils.parameter_editor import load_parameters_if_exist
+            from ..utils.parameter_editor import load_parameters_if_exist
             return load_parameters_if_exist(cls)
         except ImportError:
             logger.debug("Parameter editor module not available")
